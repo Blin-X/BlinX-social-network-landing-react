@@ -155,7 +155,6 @@ const stats = [
 
 export default function TeamPage() {
   const [showSuccess, setShowSuccess] = useState(false);
-  const [activeMember, setActiveMember] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const handleSubscribe = () => {
@@ -250,8 +249,6 @@ export default function TeamPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.2 }}
-                  onHoverStart={() => setActiveMember(member.username)}
-                  onHoverEnd={() => setActiveMember(null)}
                 >
                   <motion.div
                     className={`absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 ${member.gradient}`}
@@ -405,8 +402,6 @@ export default function TeamPage() {
                     y: viewMode === 'grid' ? -8 : -4,
                     scale: viewMode === 'grid' ? 1.02 : 1.01
                   }}
-                  onHoverStart={() => setActiveMember(member.username)}
-                  onHoverEnd={() => setActiveMember(null)}
                 >
                   {viewMode === 'grid' ? (
                     <div className="flex flex-col items-center">

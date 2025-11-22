@@ -25,7 +25,6 @@ export default function Header() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
 
@@ -82,8 +81,6 @@ export default function Header() {
           stiffness: 100,
           damping: 20
         }}
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
       >
         <div className={`container mx-auto px-6 transition-all duration-500 ${
           isScrolled ? 'py-3' : 'py-4'

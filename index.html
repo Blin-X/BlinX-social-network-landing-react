@@ -1,15 +1,131 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlinX - Social Microblogging Platform</title>
-    <meta name="description" content="Modern social microblogging platform where every moment matters. Share thoughts, connect with communities, and express yourself." />
-    <meta name="keywords" content="social media, microblogging, social network, community, BlinX" />
+    
+    <title>BlinX - Modern Social Microblogging Platform | Share Moments & Connect</title>
+    <meta name="description" content="BlinX - Next-gen social microblogging platform. Share short posts, join communities, and connect with like-minded people in real-time. Fast, secure, and user-friendly." />
+    <meta name="keywords" content="social media, microblogging, social network, community platform, real-time communication, BlinX, social platform, content sharing, online communities" />
+    <meta name="author" content="BlinX Team" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#8B5CF6" />
+    <meta name="color-scheme" content="dark" />
+
+    <link rel="canonical" href="https://blin-x.space/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blin-x.space/" />
+    <meta property="og:title" content="BlinX - Modern Social Microblogging Platform" />
+    <meta property="og:description" content="Share moments, join communities, and connect with like-minded people on BlinX - the modern social microblogging platform." />
+    <meta property="og:site_name" content="BlinX" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://blin-x.space/" />
+    <meta property="twitter:title" content="BlinX - Modern Social Microblogging Platform" />
+    <meta property="twitter:description" content="Share moments, join communities, and connect with like-minded people on BlinX." />
+    <meta property="twitter:creator" content="@blinxapp" />
+
+    <meta name="application-name" content="BlinX" />
+    <meta name="apple-mobile-web-app-title" content="BlinX" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "BlinX",
+      "description": "Modern social microblogging platform for real-time communication and community building",
+      "url": "https://blin-x.space/",
+      "applicationCategory": "SocialNetworkApplication",
+      "operatingSystem": "Web Browser",
+      "permissions": "microphone, camera, notifications",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "BlinX Team",
+        "url": "https://blin-x.space/team"
+      },
+      "featureList": [
+        "Microblogging",
+        "Community Spaces", 
+        "Real-time Chat",
+        "Privacy Controls",
+        "Content Sharing",
+        "User Profiles"
+      ],
+      "screenshot": "https://blin-x.space/favicon.svg"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BlinX",
+      "url": "https://blin-x.space/",
+      "logo": "https://blin-x.space/favicon.svg",
+      "description": "Modern social microblogging platform",
+      "sameAs": [
+        "https://discord.gg/U8WeKuFabD"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@blin-x.space",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#8B5CF6" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+    <meta name="language" content="EN" />
+    <meta name="rating" content="General" />
+    <meta name="distribution" content="Global" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+          console.log('Page load time:', loadTime + 'ms');
+        }, 0);
+      });
+    </script>
   </body>
 </html>
